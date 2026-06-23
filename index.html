@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karlina Astuti | Jurnal Digital Pribadi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+:root{
+--lavender:#e8dcff;
+--purple:#b89cff;
+--pink:#ffd9ec;
+--white:#ffffff;
+--text:#4a4a4a;
+--shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#fdf8ff,#f6eeff,#fff5fb);
+color:var(--text);
+overflow-x:hidden;
+}
+
+section{
+min-height:100vh;
+padding:80px 10%;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+
+h1,h2,h3{
+font-family:'Cormorant Garamond',serif;
+}
+
+.hidden{
+display:none;
+opacity:0;
+transform:translateY(30px);
+}
+
+.show{
+display:flex;
+animation:fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+}
+
+.profile-img{
+width:220px;
+height:220px;
+border-radius:50%;
+object-fit:cover;
+border:8px solid rgba(255,255,255,.8);
+box-shadow:var(--shadow);
+margin-bottom:25px;
+}
+
+.hero h1{
+font-size:4rem;
+color:#5f4598;
+margin-bottom:10px;
+}
+
+.tagline{
+font-size:1.1rem;
+color:#7d68b2;
+margin-bottom:25px;
+}
+
+.quote{
+max-width:700px;
+line-height:1.8;
+font-style:italic;
+margin:auto;
+margin-bottom:40px;
+}
+
+.menu{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.menu button{
+padding:14px 28px;
+border:none;
+border-radius:30px;
+background:white;
+cursor:pointer;
+font-family:'Poppins';
+font-weight:500;
+box-shadow:var(--shadow);
+transition:.3s;
+}
+
+.menu button:hover{
+transform:translateY(-3px);
+background:var(--purple);
+color:white;
+}
+
+/* CARD */
+
+.card{
+max-width:850px;
+background:white;
+padding:50px;
+border-radius:25px;
+box-shadow:var(--shadow);
+text-align:center;
+line-height:1.9;
+}
+
+.section-title{
+font-size:3rem;
+margin-bottom:30px;
+color:#6947b8;
+}
+
+/* PUISI */
+
+.puisi-container{
+width:100%;
+max-width:1000px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.puisi-card{
+background:white;
+padding:35px;
+border-radius:25px;
+box-shadow:var(--shadow);
+position:relative;
+overflow:hidden;
+}
+
+.puisi-card::before{
+content:"✦";
+position:absolute;
+top:15px;
+right:20px;
+font-size:24px;
+color:#d7c1ff;
+}
+
+.puisi-card h3{
+font-size:2rem;
+margin-bottom:20px;
+color:#6c4dbd;
+}
+
+.puisi-card p{
+white-space:pre-line;
+line-height:1.8;
+}
+
+/* GALERI */
+
+.gallery{
+width:100%;
+max-width:1200px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.photo{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:var(--shadow);
+transition:.4s;
+}
+
+.photo img{
+width:100%;
+height:250px;
+object-fit:cover;
+transition:.5s;
+}
+
+.photo:hover img{
+transform:scale(1.08);
+}
+
+.caption{
+padding:15px;
+text-align:center;
+}
+
+/* FOOTER */
+
+footer{
+padding:40px 20px;
+text-align:center;
+background:rgba(255,255,255,.5);
+backdrop-filter:blur(10px);
+}
+
+.socials{
+margin-top:15px;
+}
+
+.socials a{
+margin:0 12px;
+font-size:22px;
+color:#7d68b2;
+transition:.3s;
+}
+
+.socials a:hover{
+color:#b89cff;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:3rem;
+}
+
+.profile-img{
+width:180px;
+height:180px;
+}
+
+.section-title{
+font-size:2.3rem;
+}
+
+.card{
+padding:30px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HALAMAN AWAL -->
+
+<section class="hero">
+
+<img src="https://i.imgur.com/86D4KhK.jpeg" alt="Karlina Astuti" class="profile-img">
+
+<h1>Karlina Astuti</h1>
+
+<p class="tagline">
+Bisikan Sukma • Tapak Nirwana
+</p>
+
+<p class="quote">
+"Lidahku kelu menjelaskan luka, tapi puisi selalu tahu caranya menyuarakanku dan gunung merampas lelah dan gelisah yang sesak di dada"
+
+<div class="menu">
+<button onclick="showSection('tentang')">Tentang Saya</button>
+<button onclick="showSection('puisi')">Baca Puisi</button>
+<button onclick="showSection('pendakian')">Jejak Pendakian</button>
+<button onclick="showSection('coffee')">Coffee</button>
+</div>
+
+</section>
+
+<!-- TENTANG -->
+
+<section id="tentang" class="hidden">
+
+<h2 class="section-title">Tentang Saya</h2>
+
+<div class="card">
+<p>
+Halo, aku <strong>Karlina Astuti</strong>.
+Sulung perempuan yang disemai dalam taman kaca. Duri dunia dijauhkan tapi justru itu yang membuat akarku rapuh dan dahaga akan hujan kasih.
+Sering tumbuh bisik tak enak dari ruang paling sunyi dalam dada, aku menjelma bayang yang takut pada terangnya sendiri, enggan memberatkan, menyimpan bara, getar pada sepi, dan buta membaca bahasa jantungku.
+Saat kalut menghampiri ku tumpahkan dalam kata maka puisiku lahir dari retak yang jujur. Kemudian tanpa aba aku bertemu punggung bumi yang menjulang aku tak punya utara tapi ia memberiku kompas baru, sejak saat itu
+ada lentera menyala di rongga dada dan pelan-pelan memunggut lelah yang mengedap.
+Inilah labirin kecil miliku menyenangkan bagi siapapun yang menyaksikannya.
+</p>
+</div>
+
+</section>
+
+<!-- PUISI -->
+
+<section id="puisi" class="hidden">
+
+<h2 class="section-title">Baca Puisi</h2>
+
+<div class="puisi-container">
+
+<div class="puisi-card">
+<h3>Menjadi Sulung</h3>
+<p>
+Aku sulung perempuan aksara pertama dalam silsilah
+Dibesarkan oleh dinding yang bisu dan jam dinding yang culas
+Rumah menitipkan aku pada kawah candradimuka
+Katanya di sana ada peta hidup
+Nyatanya peta itu tanpa kompas dan kompas seharusnya ada digengaman orang rumah
+
+Aku merapal huruf seperti fakir meraba cahaya sendiri
+Sementara yang lain dituntun, dieja bersama, dibisiki makna oleh suara sumber dekapan
+Kata mereka anak pertama harus jadi menara
+namun tak ada yang bertanya apakah menaranya retak atau pondasinya basah oleh tangis
+
+Telah kubaiat diriku dengan legowo
+Semoga restu orang tuaku juga seikhlas itu pada darah dagingnya
+Perjalanan yang getir ini akan kita bayar tunai dengan bahagia di depan sana
+Biarpun luka bertahta di dalam jiwa
+Aku akan berdiri sebagai sulung yang pantas dibanggakan
+
+</p>
+</div>
+
+<div class="puisi-card">
+<h3>Kesatria Kecilku</h3>
+<p>
+Dulu aku remuk saat kasih mereka berbelok
+Aku yang haus makin kering
+Merasa tak lagi dipandang dan penuh bisikan tamat detik ini
+
+Namun tawamu merontokan sepi yang kubeton sendiri
+Mata yang bening tak tahu apa-apa justru menjadi sangkar bagiku
+Aku bertahan bukan untuk merebutkan cinta
+Tapi untuk memastikan tumbuhnya satu kehidupan menjadi manusia seutuhnya
+Karena dengan tumbuhmu ada jiwa lain yang diam-diam ikut tumbuh bersama
+</p>
+</div>
+
+</section>
+
+<!-- PENDAKIAN -->
+
+<section id="pendakian" class="hidden">
+
+<h2 class="section-title">Jejak Pendakian</h2>
+
+<div class="gallery">
+
+<div class="photo">
+<img src="https://i.imgur.com/sTcUa1R.jpeg" alt="">
+<div class="caption">Bernafas Bersama Kabut</div>
+</div>
+
+<div class="photo">
+<img src="https://i.imgur.com/NndCDj9.jpeg" alt="">
+<div class="caption">Perjalanan Menuju Langit</div>
+</div>
+
+<div class="photo">
+<img src="https://i.imgur.com/QStiQzL.jpeg" alt="">
+<div class="caption">Bersama Rintik Hujan</div>
+</div>
+
+<div class="photo">
+<img src="https://i.imgur.com/hpwDZ9x.jpeg" alt="">
+<div class="caption">Tanjakan Aduhalah</div>
+</div>
+
+<div class="photo">
+<img src="https://i.imgur.com/OHOKsoC.jpeg" alt="">
+<div class="caption">Atap Gunung Karembi</div>
+</div>
+
+<div class="photo">
+<img src="https://i.imgur.com/7g3Y4XR.jpeg" alt="">
+<div class="caption">Gunung Kerenceng</div>
+</div>
+
+<div class="photo">
+<img src="https://i.imgur.com/Gs1YcVg.jpeg" alt="">
+<div class="caption">Menatap Dinginya Kota Garut</div>
+</div>
+
+<div class="photo">
+<img src="https://i.imgur.com/8otSDoX.jpeg" alt="">
+<div class="caption">Gunung Bongkok dengan Tembok Putihnya</div>
+</div>
+
+<div class="photo">
+<img src="https://i.imgur.com/PI9Z4qn.jpeg" alt="">
+<div class="caption">Bunga Edelweis</div>
+</div>
+
+<div class="photo">
+<img src="https://i.imgur.com/x2ZX4Du.jpeg" alt="">
+<div class="caption">Gunung Papandayan</div>
+</div>
+
+<div class="photo">
+<img src="https://i.imgur.com/u8IOpVK.jpeg" alt="">
+<div class="caption">Di Atas Ragu Ada Aku</div>
+</div>
+
+<div class="photo">
+<img src="https://i.imgur.com/a3bI0a3.jpeg" alt="">
+<div class="caption">Dari Kabut Untuk Hati</div>
+</div>
+
+<div class="photo">
+<img src="https://i.imgur.com/XkwnvVY.jpeg" alt="">
+<div class="caption">Gunung Upas<div>
+</div>
+
+</section>
+<!-- kopi -->
+<section id="coffee" class="hidden">
+
+<h2 class="section-title">Coffee Journey</h2>
+
+<div class="card" style="margin-bottom:40px;">
+<p>
+Lidahku tak akrab dengan pahitnya kopi, tapi seseorang mengajakku menyusuri cafe di penjuru bumi. Gelasku tetap manis, hanya kopi miliknya yang kucicip sedikit ujungnya.
+ Perlahan pahitnya terasa akrab di lidah, sampai akhirnya gelasku sesekali diisi kopi. Kini meja yang sama tak hanya mempertemukan pahit dan manis, 
+ tapi juga percakapan yang perlahan tumbuh jadi cerita.
+</p>
+</div>
+
+<div class="gallery">
+
+<div class="photo">
+<img src="https://i.imgur.com/vOplVVH.jpeg" alt="">
+<div class="caption">Borneo Kopi</div>
+</div>
+
+<div class="photo">
+<img src="https://i.imgur.com/w9c3y4G.jpeg" alt="">
+<div class="caption">Nalu Coffe and Space</div>
+</div>
+
+<div class="photo">
+<img src="https://i.imgur.com/QSwBwUO.jpeg" alt="">
+<div class="caption">Kopi Qyanda</div>
+</div>
+
+<div class="photo">
+<img src="https://i.imgur.com/A2tiylZ.jpeg" alt="">
+<div class="caption">Cupu Manik Coffe</div>
+</div>
+
+<div class="photo">
+<img src="https://i.imgur.com/h7kX5M5.jpeg" alt="">
+<div class="caption">Chillings Space</div>
+</div>
+
+<div class="photo">
+<img src="https://i.imgur.com/SD50Q6s.jpeg" alt="">
+<div class="caption">NO.70'S Coffe</div>
+</div>
+
+<div class="photo">
+<img src="https://i.imgur.com/J7WDLBa.jpeg" alt="">
+<div class="caption">Hujan Coffe Artisan</div>
+</div>
+
+<div class="photo">
+<img src="https://i.imgur.com/z31Jo3v.jpeg" alt="">
+<div class="caption">Kopi Kenangan</div>
+</div>
+
+<div class="photo">
+<img src="https://i.imgur.com/3WdD5HR.jpeg" alt="">
+<div class="caption">Expose Coffe</div>
+</div>
+
+<div class="photo">
+<img src="https://i.imgur.com/ChtT7hi.jpeg" alt="">
+<div class="caption">Moshpit Slow Bar Coffe </div>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Karlina Astuti. All Rights Reserved.</p>
+
+<div class="socials">
+<a href="https://www.instagram.com/karlinaastuti9?igsh=cGsyaTJidzBiYzhj"><i class="fab fa-instagram"></i></a>
+<a href="https://www.tiktok.com/@karlina_093"><i class="fab fa-tiktok"></i></a>
+<a href="mailto:karlinaastuti58@gmail.com"><i class="fas fa-envelope"></i></a>
+</div>
+
+</footer>
+
+<script>
+
+function showSection(id){
+
+const section = document.getElementById(id);
+
+if(!section.classList.contains('show')){
+section.classList.remove('hidden');
+section.classList.add('show');
+}
+
+setTimeout(()=>{
+section.scrollIntoView({
+behavior:'smooth'
+});
+},100);
+
+}
+
+</script>
+
+</body>
+</html>
